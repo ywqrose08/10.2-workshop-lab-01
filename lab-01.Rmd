@@ -292,9 +292,9 @@ _Calculate the percentage change in visitor admissions from 2021 to 2022. Of the
 
 ```{r Ex_n}
 # Write your code here
-visitors %>% 
+visitors_with_nations %>% 
   mutate(
-    percentage_change=((n_2022-n_2021)/n_2021*100) )%>%
+    percentage_change=((n_2022-n_2021)/n_2021) )%>%
     filter(region =="Scotland") %>%
 group_by(admission) %>%
   summarise(
